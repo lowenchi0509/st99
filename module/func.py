@@ -355,7 +355,7 @@ def sendData_sell(event, backdata):  #Postback,顯示日期時間
         line_bot_api.reply_message(event.reply_token,message)
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
-     
+"""     
 def sendVoice(event):  #傳送聲音
     try:
         message = AudioSendMessage(
@@ -375,7 +375,7 @@ def sendVedio(event):  #傳送影像
         line_bot_api.reply_message(event.reply_token, message)
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
-
+"""
 
 def sendFlex(event):  #彈性配置
     try:
@@ -568,7 +568,7 @@ def sendAbout(event):  #關於我們
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
-def sendPosition(event):  #位置資訊
+def sendPosition2(event):  #位置資訊
     try:
         text1 = "地址：南投縣埔里鎮信義路85號"
         message = [
@@ -624,7 +624,7 @@ def manageForm(event, mtext, user_id):  #處理LIFF傳回的FORM資料
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
-def sendYes(event, user_id):  #處理取消訂房
+def sendYes2(event, user_id):  #處理取消訂房
     try:
         datadel = booking.objects.get(bid=user_id)  #從資料庫移除資料記錄
         datadel.delete()
