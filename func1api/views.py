@@ -104,6 +104,7 @@ def callback(request):
                         func.sendContact(event)
 
                    elif mtext[:3] == '###' and len(mtext) > 3:  #處理LIFF傳回的FORM資料
+                        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="##########"))
                         func.manageForm(event, mtext, user_id)
 
                    elif mtext[:6] == '123456' and len(mtext) > 6:  #推播給所有顧客
