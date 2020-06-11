@@ -10,6 +10,7 @@ from linebot.models import TextSendMessage, ImageSendMessage, LocationSendMessag
 from linebot import LineBotApi, WebhookParser
 from hotelapi.models import booking
 from hotelapi.models import users
+from studentsapp import views
 
 import datetime
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
