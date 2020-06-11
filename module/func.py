@@ -10,7 +10,7 @@ from linebot.models import TextSendMessage, ImageSendMessage, LocationSendMessag
 from linebot import LineBotApi, WebhookParser
 from hotelapi.models import booking
 from hotelapi.models import users
-from studentsapp import views
+from studentsapp.models import student
 from flask import request
 import datetime
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
@@ -620,6 +620,9 @@ def manageForm(event, mtext, user_id):  #處理LIFF傳回的FORM資料
         )
         line_bot_api.reply_message(event.reply_token,message)
         views.hello3(request, roomtype)
+      
+        students =student.objects.all().order_by('id')  #讀取資料表, 依 id 遞增排序 student2.objects.get(name="王俊德") #讀取一筆資料
+        return render(request, "listall.html", locals())
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
