@@ -619,8 +619,7 @@ def manageForm(event, mtext, user_id):  #處理LIFF傳回的FORM資料
         text = text1
         )
         line_bot_api.reply_message(event.reply_token,message)
-        views.hello3(request, roomtype)
-      
+    
         students =student.objects.all().order_by('id')  #讀取資料表, 依 id 遞增排序 student2.objects.get(name="王俊德") #讀取一筆資料
         return render(request, "listall.html", locals())
     except:
