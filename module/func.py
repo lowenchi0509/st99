@@ -11,7 +11,7 @@ from linebot import LineBotApi, WebhookParser
 from hotelapi.models import booking
 from hotelapi.models import users
 from studentsapp import views
-
+from flask import request
 import datetime
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
@@ -615,12 +615,11 @@ def manageForm(event, mtext, user_id):  #處理LIFF傳回的FORM資料
         
         text1 = "您的查詢統一編號資料如下："
         text1 += "\n統一編號：" + roomtype
- 
-      
         message = TextSendMessage(  #顯示訂房資料
-            text = text1
+        text = text1
         )
         line_bot_api.reply_message(event.reply_token,message)
+        views.hello3(request, roomtype)
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
