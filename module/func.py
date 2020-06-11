@@ -608,11 +608,10 @@ def manageForm(event, mtext, user_id):  #處理LIFF傳回的FORM資料
         flist = mtext[3:].split('/')  #去除前三個「#」字元再分解字串
         roomtype = flist[0]  #取得輸入資料
         amount = flist[1]
-        in_date ='2020-01-01'
-        out_date ='2010-02-31'
         
-        unit = booking.objects.create(bid=user_id, roomtype=roomtype, roomamount=amount, datein=in_date, dateout=out_date)  #寫入資料庫
-        unit.save()
+        
+        #unit = booking.objects.create(bid=user_id, roomtype=roomtype, roomamount=amount)  #寫入資料庫
+       # unit.save()
         
         text1 = "您的房間已預訂成功，資料如下："
         text1 += "\n房間型式：" + roomtype
