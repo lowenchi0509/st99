@@ -65,7 +65,7 @@ def callback(request):
                         func.sendButtonq(event)
                    elif mtext == '@交通一點通':
                         func.sendButtonr(event)
-                   elif mtext == '@旅遊及時報':
+                   elif mtext == '@旅遊即時報':
                         func.sendButtons(event)
                    elif mtext == '@天氣小幫手':
                         func.sendButtont(event)
