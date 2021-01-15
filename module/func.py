@@ -356,6 +356,114 @@ def sendData_sell(event, backdata):  #Postback,顯示日期時間
         line_bot_api.reply_message(event.reply_token,message)
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
+
+
+
+def sendButtonp(event):  #按鈕樣版
+	    try:
+	        message = TemplateSendMessage(
+	            alt_text='按鈕樣板',
+	            template=ButtonsTemplate(
+	                thumbnail_image_url='https://img.onl/TtmP9C',  #顯示的圖片           
+	                text='                旅遊小幫手',  #副標題
+	                actions=[	                   
+                        URITemplateAction(  #開啟網頁
+	                        label='旅遊數據分析結果',
+	                        uri='https://liff.line.me/1655387687-z62OZbm7'
+	                    ),	                    
+	                ]
+	            )
+	        )
+	        line_bot_api.reply_message(event.reply_token, message)
+	    except:
+	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
+            
+
+def sendButtonq(event):  #按鈕樣版
+	    try:
+	        message = TemplateSendMessage(
+	            alt_text='按鈕樣板',
+	            template=ButtonsTemplate(
+	                thumbnail_image_url='https://img.onl/TtmP9C',  #顯示的圖片           
+	                text='                旅遊小幫手',  #副標題
+	                actions=[	                   
+                        URITemplateAction(  #開啟網頁
+	                        label='旅遊數據分析結果',
+	                        uri='https://liff.line.me/1655387687-z62OZbm7'
+	                    ),	                    
+	                ]
+	            )
+	        )
+	        line_bot_api.reply_message(event.reply_token, message)
+	    except:
+	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
+            
+            
+
+def sendButtonr(event):  #按鈕樣版
+	    try:
+	        message = TemplateSendMessage(
+	            alt_text='按鈕樣板',
+	            template=ButtonsTemplate(
+	                thumbnail_image_url='https://img.onl/WsoLrl',  #顯示的圖片           
+	                text='              交通查詢系統',  #副標題
+	                actions=[	                   
+                        URITemplateAction(  #開啟網頁
+	                        label='查詢交通',
+	                        uri='https://liff.line.me/1655387687-qvYLKnGM'
+	                    ),
+                        URITemplateAction(  #開啟網頁
+	                        label='了解訂票資訊',
+	                        uri='https://liff.line.me/1655387687-V6n5eP2y'
+	                    ),	                    
+                  ]
+	            )
+	        )
+	        line_bot_api.reply_message(event.reply_token, message)
+	    except:
+	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
+
+def sendButtons(event):  #按鈕樣版
+	    try:
+	        message = TemplateSendMessage(
+	            alt_text='按鈕樣板',
+	            template=ButtonsTemplate(
+	                thumbnail_image_url='https://i.imgur.com/llADffI.jpg',  #顯示的圖片           
+	                text='               旅遊即時報',  #副標題
+	                actions=[	                   
+                        URITemplateAction(  #開啟網頁
+	                        label='疫情地圖',
+	                        uri='https://liff.line.me/1655387687-pqOrQzNZ'
+	                    ),
+                        URITemplateAction(  #開啟網頁
+	                        label='國道交通狀況',
+	                        uri='https://liff.line.me/1655387687-W64Q2rmV'
+	                    ),	                    
+                  ]
+	            )
+	        )
+                    
+	        line_bot_api.reply_message(event.reply_token, message)
+	    except:
+	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
+def sendButtont(event):  #按鈕樣版
+	    try:
+	        message = TemplateSendMessage(
+	            alt_text='按鈕樣板',
+	            template=ButtonsTemplate(
+	                thumbnail_image_url='https://i.imgur.com/K1yjnxe.jpg',  #顯示的圖片           
+	                text='                天氣小幫手',  #副標題
+	                actions=[	                   
+                        URITemplateAction(  #開啟網頁
+	                        label='天氣查詢',
+	                        uri='https://liff.line.me/1655387687-7qPelRNg'
+	                    ),	                    
+	                ]
+	            )
+	        )
+	        line_bot_api.reply_message(event.reply_token, message)
+	    except:
+	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 """     
 def sendVoice(event):  #傳送聲音
     try:
