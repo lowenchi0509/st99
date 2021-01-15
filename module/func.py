@@ -75,23 +75,35 @@ def sendPosition(event):  #傳送位置
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
+                   elif mtext == '@旅遊數據分析':
+                        func.sendButtonp(event)
+                   elif mtext == '@景點查詢':
+                        func.sendButtonq(event)
+                   elif mtext == '@交通一點通':
+                        func.sendButtonr(event)
+                   elif mtext == '@旅遊及時報':
+                        func.sendButtons(event)
+                   elif mtext == '@天氣小幫手':
 def sendQuickreply(event):  #快速選單
     try:
         message = TextSendMessage(
-            text='請選擇最喜歡的程式語言',
+            text='請選擇下列資訊',
             quick_reply=QuickReply(
                 items=[
                     QuickReplyButton(
-                        action=MessageAction(label="Python", text="Python")
+                        action=MessageAction(label="@旅遊數據分析", text="@旅遊數據分析")
                     ),
                     QuickReplyButton(
-                        action=MessageAction(label="Java", text="Java")
+                        action=MessageAction(label="@景點查詢", text="@景點查詢")
                     ),
                     QuickReplyButton(
-                        action=MessageAction(label="C#", text="C#")
+                        action=MessageAction(label="@交通一點通", text="@交通一點通")
                     ),
                     QuickReplyButton(
-                        action=MessageAction(label="Basic", text="Basic")
+                        action=MessageAction(label="@旅遊即時報", text="@旅遊即時報")
+                    ),
+	            QuickReplyButton(
+                        action=MessageAction(label="@天氣小幫手", text="@天氣小幫手")
                     ),
                 ]
             )
