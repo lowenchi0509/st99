@@ -59,7 +59,16 @@ def callback(request):
               
                    elif mtext == '@按鈕樣板':
                         func.sendButton(event)
-    
+                   elif mtext == '@按鈕樣板p':
+                        func.sendButtonp(event)
+                   elif mtext == '@按鈕樣板q':
+                        func.sendButtonq(event)
+                   elif mtext == '@按鈕樣板r':
+                        func.sendButtonr(event)
+                   elif mtext == '@按鈕樣板s':
+                        func.sendButtons(event)
+                   elif mtext == '@按鈕樣板t':
+                        func.sendButtont(event)
                    elif mtext == '@確認樣板':
                         func.sendConfirm(event)
     
