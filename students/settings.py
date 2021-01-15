@@ -29,19 +29,33 @@ from linebot.models import *
 
 
 
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'Ub8e3cf75739079f25a50f82b2cbd4c63'
+SECRET_KEY = 'Udb26d71aa0a3d9bf631d2897b5d6ad85'
 # 必須放上自己的Channel Access Token
-LINE_CHANNEL_ACCESS_TOKEN ='528gEzSdPX8Pw9mTJlfpXRpTBdETmaT0LJuHs8+3/qBsiz1lWzBRIfWXQexgOdiPyGxeLtL9HAggCjAp0LBJcqKAdv7h8Ux5JQpKMioyobyYoBQpwer/eA3cA1e89/b80sl219M34lvpXlAAFud++wdB04t89/1O/w1cDnyilFU='
+LINE_CHANNEL_ACCESS_TOKEN ='fT3GyLnoLosi7YceTc9XgOK2zJh/RLnoSVBbHtOi5TMFAh8zS6xVlPqqqWV4c8QsrVEdAgpHvnnbKS+nuVNFxcvz1V5cHHYYuPvKRGtV518WeGcbhFmd1XJgV9DNcRlBHIeJewOqu3KPO6xVlUGnagdB04t89/1O/w1cDnyilFU='
 # 必須放上自己的Channel Secret
-LINE_CHANNEL_SECRET='43664ae683e1af5eb58087c85b74216d'
+LINE_CHANNEL_SECRET='8aa414aee6a24cfa9763474df4b5cb3e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['*']
 DEBUG = True
+
+# SECURITY WARNING: keep the secret key used in production secret!
+#SECRET_KEY = 'Ub8e3cf75739079f25a50f82b2cbd4c63'
+# 必須放上自己的Channel Access Token
+#LINE_CHANNEL_ACCESS_TOKEN ='528gEzSdPX8Pw9mTJlfpXRpTBdETmaT0LJuHs8+3/qBsiz1lWzBRIfWXQexgOdiPyGxeLtL9HAggCjAp0LBJcqKAdv7h8Ux5JQpKMioyobyYoBQpwer/eA3cA1e89/b80sl219M34lvpXlAAFud++wdB04t89/1O/w1cDnyilFU='
+# 必須放上自己的Channel Secret
+#LINE_CHANNEL_SECRET='43664ae683e1af5eb58087c85b74216d'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+#ALLOWED_HOSTS = ['*']
+#DEBUG = True
 
 
 # Application definition
