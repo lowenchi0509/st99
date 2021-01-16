@@ -69,6 +69,9 @@ def callback(request):
                         func.sendButtons(event)
                    elif mtext == '天氣小幫手':
                         func.sendButtont(event)
+                   elif mtext == '2020旅遊調查':
+                        func.sendButtonu(event)
+                        
                    elif mtext == '@確認樣板':
                         func.sendConfirm(event)
     
