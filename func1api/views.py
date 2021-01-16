@@ -129,8 +129,8 @@ def callback(request):
                 if backdata.get('action') == 'yes':
                   func.sendYes(event, event.source.user_id) 
 
-            else:            
-                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
+            #else:            
+                #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
                
         return HttpResponse()
 
