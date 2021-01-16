@@ -89,13 +89,16 @@ def sendQuickreply(event):  #快速選單
                         action=MessageAction(label="景點查詢", text="景點查詢")
                     ),
                     QuickReplyButton(
-                        action=MessageAction(label="交通一點通", text="交通一點通")
+                        action=MessageAction(label="交通", text="交通一點通")
                     ),
                     QuickReplyButton(
-                        action=MessageAction(label="旅遊即時報", text="旅遊即時報")
+                        action=MessageAction(label="即時報", text="旅遊即時報")
                     ),
 	            QuickReplyButton(
-                        action=MessageAction(label="天氣小幫手", text="天氣小幫手")
+                        action=MessageAction(label="天氣", text="天氣小幫手")
+                    ),
+		   QuickReplyButton(
+                        action=MessageAction(label="調查", text="天氣小幫手")
                     ),
                 ]
             )
@@ -362,7 +365,6 @@ def sendData_sell(event, backdata):  #Postback,顯示日期時間
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
 
-
 def sendButtonp(event):  #按鈕樣版
 	    try:
 	        message = TemplateSendMessage(
@@ -373,7 +375,7 @@ def sendButtonp(event):  #按鈕樣版
 	                actions=[	                   
                         URITemplateAction(  #開啟網頁
 	                        label='旅遊數據分析結果',
-	                        uri='https://liff.line.me/1655387687-z62OZbm7'
+	                        uri='https://liff.line.me/1655387687-k6LB7JY4'
 	                    ),	                    
 	                ]
 	            )
@@ -400,9 +402,7 @@ def sendButtonq(event):  #按鈕樣版
 	        line_bot_api.reply_message(event.reply_token, message)
 	    except:
 	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
-
-            
-
+          
 def sendButtonr(event):  #按鈕樣版
 	    try:
 	        message = TemplateSendMessage(
@@ -467,6 +467,28 @@ def sendButtont(event):  #按鈕樣版
 	        line_bot_api.reply_message(event.reply_token, message)
 	    except:
 	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
+		
+		
+
+def sendButtonu(event):  #按鈕樣版
+	    try:
+	        message = TemplateSendMessage(
+	            alt_text='按鈕樣板',
+	            template=ButtonsTemplate(
+	                thumbnail_image_url='https://i.imgur.com/0lWM4Ic.jpg',  #顯示的圖片           
+	                text='               2020旅遊調查',  #副標題
+	                actions=[	                   
+                        URITemplateAction(  #開啟網頁
+	                        label='開始填寫',
+	                        uri='https://liff.line.me/1655387687-N6V5Dx2b'
+	                    ),	                    
+	                ]
+	            )
+	        )
+	        line_bot_api.reply_message(event.reply_token, message)
+	    except:
+	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))		
+		
 """     
 def sendVoice(event):  #傳送聲音
     try:
