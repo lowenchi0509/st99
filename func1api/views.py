@@ -119,7 +119,7 @@ def callback(request):
                         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="##########"))
                         func.manageForm(event, mtext, user_id)
 
-                   elif mtext[:6] == '123456' and len(mtext) > 6:  #推播給所有顧客
+                   elif mtext[:6] == 'call' and len(mtext) > 4:  #推播給所有顧客
                         func.pushMessage(event, mtext)
 
             if isinstance(event, PostbackEvent):  #PostbackTemplateAction觸發此事件
