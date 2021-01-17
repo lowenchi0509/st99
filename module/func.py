@@ -514,18 +514,28 @@ def sendButtonv(event):  #按鈕樣版
 	    except:
 	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
+
 def sendButtonx(event):  #按鈕樣版
-	                actions=[	                   		                actions=[	                   
-                        URITemplateAction(  #開啟網頁	                        URITemplateAction(  #開啟網頁
-	                        label='即時路況1',		                        label='即時路況1',
-	                        uri='https://google-translate-proxy.herokuapp.com/api/tts?query=%27羅斯福路+基隆路口.汽車+機車事故-通知續%27&language=zh-tw'		                        uri='https://google-translate-proxy.herokuapp.com/api/tts?query=%27羅斯福路+基隆路口.汽車+機車事故-通知續%27&language=zh-tw'
-	                    ),		                    ),
-                        URITemplateAction(  #開啟網頁	                        URITemplateAction(  #開啟網頁
-	                        label='即時路況2',		                        label='即時路況2',
-	                        uri='https://google-translate-proxy.herokuapp.com/api/tts?query=%27台61線((西濱快速))] 北上157.7km 龍井交流道前 指示牌看起來有點搖晃(已排除)排除%27&language=zh-tw'		                        uri='https://google-translate-proxy.herokuapp.com/api/tts?query=%27台61線((西濱快速))] 北上157.7km 龍井交流道前 指示牌看起來有點搖晃(已排除) 後續排除%27&language=zh-tw'
-	                    ),	                    		                    ),	                    
-                    ]	                    ]
+	    try:
+	        message = TemplateSendMessage(
+	            alt_text='按鈕樣板',
+	            template=ButtonsTemplate(
+                        text='               警廣即時路況',  #副標題
+	                actions=[	                   
+                        URITemplateAction(  #開啟網頁
+	                        label='即時路況1',
+	                        uri='https://google-translate-proxy.herokuapp.com/api/tts?query=%27羅斯福路+基隆路口.汽車+機車事故-通知續%27&language=zh-tw'
+	                    ),
+                        URITemplateAction(  #開啟網頁
+	                        label='即時路況2',
+	                        uri='https://google-translate-proxy.herokuapp.com/api/tts?query=%27[台61線((西濱快速))] 北上157.7km   龍井交流道前 指示牌看起來有點搖晃(已排除) 後續排除%27&language=zh-tw'
+	                    ),	                    
+                    ]
 	            )
+	        )
+	        line_bot_api.reply_message(event.reply_token, message)
+	    except:
+	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 		
 		
 def sendVoice(event):  #傳送聲音
