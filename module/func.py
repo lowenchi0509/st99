@@ -748,7 +748,7 @@ def sendContactp(event):  #聯絡我們
                 thumbnail_image_url='https://i.imgur.com/tVjKzPH.jpg',
                 text='警廣回報路況',
                 actions=[
-                    URITemplateAction(label='撥打電話', uri='tel:0800000123')  #開啟打電話功能
+                    URITemplateAction(label='撥打電話0800000123', uri='tel:0800000123')  #開啟打電話功能
                 ]
             )
         )
