@@ -114,6 +114,9 @@ def callback(request):
 
                    elif mtext == '@聯絡我們':
                         func.sendContact(event)
+                   
+                   elif mtext == '聯絡警廣':
+                        func.sendContact(event)
 
                    elif mtext[:3] == '###' and len(mtext) > 3:  #處理LIFF傳回的FORM資料
                         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="##########"))
