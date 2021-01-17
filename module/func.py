@@ -101,7 +101,7 @@ def sendQuickreply(event):  #快速選單
                         action=MessageAction(label="調查", text="2020旅遊調查")
                     ),
 		   QuickReplyButton(
-                        action=MessageAction(label="警廣", text="連絡警廣")
+                        action=MessageAction(label="警廣", text="聯絡警廣")
                     ),
                 ]
             )
