@@ -496,7 +496,7 @@ def sendButtonu(event):  #按鈕樣版
 	    except:
 	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))	
 
-def sendButtonx(event):  #按鈕樣版
+def sendButtonv(event):  #按鈕樣版
 	    try:
 	        message = TemplateSendMessage(
 	            alt_text='按鈕樣板',
@@ -514,7 +514,7 @@ def sendButtonx(event):  #按鈕樣版
 	    except:
 	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
-def sendButtonv(event):  #按鈕樣版
+def sendButtonx(event):  #按鈕樣版
 	                actions=[	                   		                actions=[	                   
                         URITemplateAction(  #開啟網頁	                        URITemplateAction(  #開啟網頁
 	                        label='即時路況1',		                        label='即時路況1',
