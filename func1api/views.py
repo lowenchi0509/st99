@@ -71,6 +71,8 @@ def callback(request):
                         func.sendButtont(event)
                    elif mtext == '2020旅遊調查':
                         func.sendButtonu(event)
+                   elif mtext == '播報警廣事故路況':
+                        func.sendButtonv(event)
                         
                    elif mtext == '@確認樣板':
                         func.sendConfirm(event)
@@ -117,7 +119,7 @@ def callback(request):
                    
                    elif mtext == '聯絡警廣':
                         func.sendContactp(event)
-
+                 
                    elif mtext[:3] == '###' and len(mtext) > 3:  #處理LIFF傳回的FORM資料
                         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="##########"))
                         func.manageForm(event, mtext, user_id)
