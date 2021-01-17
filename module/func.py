@@ -491,18 +491,18 @@ def sendButtonu(event):  #按鈕樣版
 	        line_bot_api.reply_message(event.reply_token, message)
 	    except:
 	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))		
-		
-"""     
+		  
 def sendVoice(event):  #傳送聲音
     try:
         message = AudioSendMessage(
-            original_content_url=baseurl + 'mario.m4a',  #聲音檔置於static資料夾
+	 
+            original_content_url='https://google-translate-proxy.herokuapp.com/api/tts?query=%27[台61線((西濱快速))] 北上157.7km   	龍井交流道前 指示牌看起來有點搖晃(已排除) 後續  排除%27&language=zh-tw',  #聲音檔置於static資料夾
             duration=20000  #聲音長度20秒
         )
         line_bot_api.reply_message(event.reply_token, message)
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
-
+"""
 def sendVedio(event):  #傳送影像
     try:
         message = VideoSendMessage(
