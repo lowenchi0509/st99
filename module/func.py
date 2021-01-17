@@ -495,6 +495,7 @@ def sendButtonu(event):  #按鈕樣版
 	        line_bot_api.reply_message(event.reply_token, message)
 	    except:
 	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))	
+
 def sendButtonv(event):  #按鈕樣版
 	    try:
 	        message = TemplateSendMessage(
@@ -503,17 +504,16 @@ def sendButtonv(event):  #按鈕樣版
                         text='               警廣即時路況',  #副標題
 	                actions=[	                   
                         URITemplateAction(  #開啟網頁
-	                        label='即時路況1',
-	                        uri='https://google-translate-proxy.herokuapp.com/api/tts?query=%27羅斯福路+基隆路口.汽車+機車事故-通知續%27&language=zh-tw'
+	                        label='即時路況',
+	                        uri='https://liff.line.me/1655387687-86lXgYG3'
 	                    ),
-                                          
                     ]
 	            )
 	        )
 	        line_bot_api.reply_message(event.reply_token, message)
 	    except:
 	        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
-		  
+		
 def sendVoice(event):  #傳送聲音
             try:
                   message = AudioSendMessage(
