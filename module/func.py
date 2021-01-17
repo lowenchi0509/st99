@@ -103,6 +103,10 @@ def sendQuickreply(event):  #快速選單
 		   QuickReplyButton(
                         action=MessageAction(label="警廣", text="聯絡警廣")
                     ),
+		    QuickReplyButton(
+                        action=MessageAction(label="播報事故路況", text="播報警廣事故路況")
+                    ),
+			
                 ]
             )
         )
