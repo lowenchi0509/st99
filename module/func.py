@@ -737,6 +737,21 @@ def sendContact(event):  #聯絡我們
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
+def sendContactp(event):  #聯絡我們
+    try:
+        message = TemplateSendMessage(
+            alt_text = "聯絡我們",
+            template = ButtonsTemplate(
+                thumbnail_image_url='https://i.imgur.com/tVjKzPH.jpg',
+                text='               警廣回報路況',
+                actions=[
+                    URITemplateAction(label='撥打電話', uri='tel:0800000123')  #開啟打電話功能
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token,message)
+    except:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 def manageForm(event, mtext, user_id):  #處理LIFF傳回的FORM資料
     try:
         flist = mtext[3:].split('/')  #去除前三個「#」字元再分解字串
